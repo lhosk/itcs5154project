@@ -32,7 +32,7 @@ Predicts next-day wave height using a sliding window of meteorological features.
 - **Architecture:** LSTM (hidden=128, layers=2, dropout=0.3) → FC layers
 - **Results:** RMSE = 0.2811 m, MAE = 0.1997 m, R² = 0.295
 
-### Model 2 — WindLSTM (SWH from Wind Speed)
+### Model 2 — Wind LSTM (SWH from Wind Speed)
 Predicts wave height using derived wind speed and atmospheric features.
 
 - **Target:** `wave_height`
@@ -41,7 +41,7 @@ Predicts wave height using derived wind speed and atmospheric features.
 - **Window:** 6 timesteps, ~1,361 samples
 - **Architecture:** LSTM (hidden=64, layers=1, dropout=0.7) → FC layers
 
-### Model 3 — SSTLSTM (Multi-Lead SST Forecasting)
+### Model 3 — Seat Surface Temperature LSTM (Multi-Lead SST Forecasting)
 Predicts SST at multiple forecast horizons using lagged SST and weather features.
 
 - **Target:** `SST`
@@ -51,7 +51,7 @@ Predicts SST at multiple forecast horizons using lagged SST and weather features
 - **Window:** 30 timesteps
 - **Architecture:** LSTM (hidden=128, layers=2, dropout=0.3) → FC layers
 
-### Model 4 — WaveLSTM (SWH with Lagged Wave Features)
+### Model 4 — Significant Wave Height LSTM (SWH with Lagged Wave Features)
 Predicts wave height using wind, atmospheric, and lagged wave height features.
 
 - **Target:** `wave_height`
