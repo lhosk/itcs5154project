@@ -41,7 +41,7 @@ Predicts wave height using derived wind speed and atmospheric features.
 - **Window:** 6 timesteps, ~1,361 samples
 - **Architecture:** LSTM (hidden=64, layers=1, dropout=0.7) → FC layers
 
-### Model 3 — Seat Surface Temperature LSTM (Multi-Lead SST Forecasting)
+### Model 3 — Sea Surface Temperature LSTM (Multi-Lead SST Forecasting)
 Predicts SST at multiple forecast horizons using lagged SST and weather features.
 
 - **Target:** `SST`
